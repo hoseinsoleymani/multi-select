@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Multi SelectBox 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Project is Multi Select Component with the ability of add new item to the select box list.
 
-Currently, two official plugins are available:
+## Installation
+1. Install pnpm by running the following command:
+   ```bash
+   npm install -g pnpm
+   ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/hoseinsoleymani/multi-select.git
+   ```
 
-## Expanding the ESLint configuration
+3. Install dependencies:
+   ```bash
+   pnpm i
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Usage
+### Development
+To start the development server, run:
+```bash
+pnpm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Build
+To build the app for production, run:
+```bash
+pnpm build
+```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Preview
+To preview the production build locally, run:
+```bash
+pnpm preview
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Linting
+To lint the codebase, run:
+```bash
+pnpm lint
 ```
