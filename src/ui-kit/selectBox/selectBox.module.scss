@@ -1,6 +1,6 @@
 .selectBox {
   position: relative;
-  width: 300px;
+  width: 330px;
   &Control {
     display: flex;
     justify-content: space-between;
@@ -34,10 +34,11 @@
   &Arrow {
     font-size: 16px;
     font-weight: bold;
+    color: #232323;
   }
   &Menu {
     position: absolute;
-    top: 100%;
+    top: 125%;
     left: 0;
     right: 0;
     border: 1px solid #ccc;

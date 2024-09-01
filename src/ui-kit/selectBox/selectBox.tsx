@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { FaCheck } from 'react-icons/fa6';
-import { IoIosArrowUp } from 'react-icons/io';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 import { useClickOutside } from '../../hooks';
 import styles from './selectBox.module.scss';
@@ -76,7 +76,7 @@ const SelectBoxButton = ({
         aria-label="Search options"
       />
       <div className={styles.selectBoxArrow}>
-        <IoIosArrowUp />
+        {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
       </div>
     </button>
   );
