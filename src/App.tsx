@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { SelectBox } from './ui-kit/selectBox/selectBox';
+import { SelectBox } from './ui-kit';
 
 const App = () => {
   const [value, setValue] = useState<string[]>([]);

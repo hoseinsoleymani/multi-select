@@ -23,5 +23,5 @@ export interface SelectBoxOptionProps {
   optionValue: string;
   optionLabel: string;
   handleSelect: (value: string) => void;
-  value: string[];
+  isSelectedValue: (value: string) => boolean;
 }

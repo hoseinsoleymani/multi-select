@@ -15,10 +15,8 @@ const SelectBoxOption = ({
   optionValue,
   optionLabel,
   handleSelect,
-  value,
+  isSelectedValue,
 }: SelectBoxOptionProps) => {
-  const isSelectedValue = (itemValue: string) => value.includes(itemValue);
-
   return (
     <li>
       <button
@@ -137,6 +135,8 @@ export const SelectBox = ({
     }
   };
 
+  const isSelectedValue = (itemValue: string) => value.includes(itemValue);
+
   return (
     <div className={styles.selectBox} ref={selectBoxRef}>
       <SelectBoxButton
@@ -159,7 +159,7 @@ export const SelectBox = ({
                   handleSelect={handleSelect}
                   optionLabel={optionLabel}
                   optionValue={optionValue}
-                  value={value}
+                  isSelectedValue={isSelectedValue}
                 />
               ),
             )}
