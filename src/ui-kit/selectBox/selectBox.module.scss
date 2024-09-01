@@ -1,0 +1,65 @@
+.selectBox {
+  position: relative;
+  width: 300px;
+  font-family: Arial, sans-serif;
+  &Control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    &:focus {
+      outline: 2px solid #005fcc;
+    }
+  }
+  &Placeholder {
+    color: #888;
+  }
+  &Arrow {
+    font-size: 12px;
+  }
+  &Menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  &Search {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: none;
+    outline: none;
+  }
+  &List {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  &Option {
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+  &Tick {
+    float: right;
+    color: green;
+    font-weight: bold;
+  }
+}
+
+
+
+
