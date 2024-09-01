@@ -9,3 +9,19 @@ export interface SelectBoxProps {
   value: string[];
   onChange: (value: string[]) => void;
 }
+
+export interface SelectBoxButtonProps
+  extends Omit<SelectBoxProps, 'onChange' | 'options'> {
+  handleToggleOpen: () => void;
+  isOpen: boolean;
+  inputValue: string;
+  handleKeyPress: (value: React.KeyboardEvent<HTMLInputElement>) => void;
+  handleInputChange: (value: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface SelectBoxOptionProps {
+  optionValue: string;
+  optionLabel: string;
+  handleSelect: (value: string) => void;
+  value: string[];
+}

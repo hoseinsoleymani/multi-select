@@ -1,18 +1,20 @@
 import type { RefObject } from 'react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export const useClickOutside = (HTMLRefElement: RefObject<HTMLDivElement>) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClickOutside = (e: MouseEvent) => {
-    console.log(!HTMLRefElement.current.contains(e.target as Node))
-    if (
-      HTMLRefElement.current &&
-      !HTMLRefElement.current.contains(e.target as Node)
-    ) {
-      setIsOpen(false);
-    }
-  };
+  const handleClickOutside = useCallback(
+    (e: MouseEvent) => {
+      if (
+        HTMLRefElement.current &&
+        !HTMLRefElement.current.contains(e.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    },
+    [HTMLRefElement],
+  );
 
   useEffect(() => {
     document.addEventListener('click', handleClickOutside);

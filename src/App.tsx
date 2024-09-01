@@ -12,9 +12,12 @@ const App = () => {
   return (
     <SelectBox
       onChange={changeSelectboxHandler}
-      options={[{ label: 'Hello', value: 'Its value' }]}
+      options={[
+        { label: 'Education', value: 'Education' },
+        { label: 'Yeeeeah, science', value: 'Yeeeeah, science' },
+      ]}
       value={value}
-      placeholder="Click to see items.."
+      placeholder="Search or add new item..."
     />
   );
 };
